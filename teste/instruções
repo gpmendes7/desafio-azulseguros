@@ -1,0 +1,39 @@
+# Estrutura de um shake 
+
+A estrutura de dados abaixo representa uma lista de shakes , onde cada shake possui sua lista de ingredientes.
+
+```
+{
+  "Clássico": ["morango", "banana", "abacaxi", "manga", "pêssego", "mel", "gelo", "iogurte"],
+  "Forest Berry": ["morango", "framboesa", "mirtilo", "mel", "gelo", "iogurte"],
+  "Freezie": ["amora", "mirtilo", "groselha preta", "suco de uva", "iogurte congelado"],
+  "Greenie": ["maçã verde", "kiwi", "limão", "abacate", "espinafre", "gelo", "suco de maçã"],
+  "Vegan Delite": ["morango", "maracujá", "abacaxi", "manga", "pêssego", "gelo", "leite de soja"],
+  "Apenas sobremesas": ["banana", "sorvete", "chocolate", "amendoim", "cereja"],
+  "Emagrecedor": ["leite desnatado", "cacau em pó", "farelo de linhaça", "farelo de gergelim", "aveia"],
+}
+
+```
+ 
+Com base na estrutura, construa uma solução que represente o modelo acima e permita incluir e remover ingredientes de um shake.
+
+O parâmetro de entrada é uma string (`Freezie, +leite, -iogurte congelado`), onde o primeiro valor é o tipo do shake, e os demais a lista de ingredientes com suas operações. O retorno dessa operação é a lista atualizada de ingredientes do tipo passado. Como resultado final, os shakes não devem possuir ingredientes repetidos.
+
+
+
+# Critérios de aceite
+
+- deve ser possível listar os shakes e seus ingredientes, incluindo a lista inicial do enunciado.
+
+- deve ser possível alterar um shake incluindo (+) e removendo (-) ingredientes.
+
+## Exemplos:
+
+``` 
+  `Dado` "Clássico, + chocolate " `deve retornar` [morango,banana,abacaxi,manga,pêssego,mel,gelo,iogurte,chocolate]
+
+  `Dado` "Clássico, + chocolate, -abacaxi, -pessego, +manga" `deve retornar` [morango,banana,manga,pêssego,mel,gelo,iogurte,chocolate]
+
+  `Dado` "Emagrecedor, + leite de soja, - leite desnatado, -linhaça" `deve retornar` [cacau em pó, farelo de linhaça, farelo de gergelim, aveia, leite de soja]
+
+```
